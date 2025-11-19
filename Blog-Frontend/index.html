@@ -900,7 +900,7 @@
         }
 
         async function handleUploadTheme(e) {
-            e.preventDefault();
+            if(e) e.preventDefault();
             const title = document.getElementById('themeTitle').value;
             const description = document.getElementById('themeDescription').value;
             const imageFile = document.getElementById('themeImage').files[0];
