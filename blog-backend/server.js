@@ -19,11 +19,12 @@ const app = express();
 
 // Middleware
 const corsOptions = {
-  origin: "https://obcms.netlify.app",
+  origin: ["https://obcms.netlify.app", "http://localhost:3000"],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
 };
+
 
 app.use(cors(corsOptions));
 // Handle preflight correctly
@@ -343,7 +344,7 @@ app.post('/api/support', async (req, res) => {
 
     // Send email notification
     const mailOptions = {
-      from: email,
+      from: 'indranilganguly2025@gmail.com',
       to: 'indranilganguly2025@gmail.com',
       subject: `Support Ticket: ${subject}`,
       html: `
