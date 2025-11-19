@@ -344,7 +344,7 @@ app.post('/api/support', async (req, res) => {
 
     // Send email notification
     const mailOptions = {
-      from: 'indranilganguly2004@gmail.com',
+      from: email,
       to: 'indranilganguly2025@gmail.com',
       subject: `Support Ticket: ${subject}`,
       html: `
